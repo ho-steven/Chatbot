@@ -1,3 +1,5 @@
 https://github.com/theopenconversationkit/tock
 https://github.com/deeppavlov/DeepPavlov
 https://github.com/blitz-cmd/College-Helpdesk-Chatbot
+https://github.com/mmabrouk/chatgpt-wrapper
+https://dev.to/codemee/yong-python-chuan-jie-openai-mo-ni-chatgpt-liao-tian-ji-qi-ren-2fh6
