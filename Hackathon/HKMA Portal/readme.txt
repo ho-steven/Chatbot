@@ -10,7 +10,7 @@ Step 3: Install the missing/required python packages
 
 set http_proxy=http://proxy01.intra.hkma.gov.hk:8080
 set https_proxy=http://proxy01.intra.hkma.gov.hk:8080
-pip --trusted-host pypi.python.org --trusted-host files.pythonhosted.org --trusted-host pypi.org install ¡VU django
+pip --trusted-host pypi.python.org --trusted-host files.pythonhosted.org --trusted-host pypi.org install django
 
 Step 4: Follow step 2 run again
 
