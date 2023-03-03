@@ -1,0 +1,103 @@
+{% include 'logged_navbar.html'%}
+
+
+<div class="profile-table">
+	<h4>Tickets Created by {{user.first_name}}</h4>
+	<table class="table">
+		<thead>
+			<tr>
+				<th scope="col" id='table-id'>Ticket ID </th>
+				<th scope="col">Subject </th>
+				<th scope="col">Ticket Status </th>
+				<th scope="col">Edit </th>
+			</tr>
+		</thead>
+		<tbody>
+
+		{% for ticket in all_tickets reversed%}
+			{% if ticket.created_by.id == user.id %}
+			<tr class="table-row">
+				<td class="table-data" id='table-id'><a href="/ticket/{{ticket.id}}/edit">{{ticket.id}}</a></td>
+				<td class="table-data"><a href="/ticket/{{ticket.id}}/edit">{{ticket.subject}}</a></td>
+				<td>{{ticket.ticket_status}}</td>
+				<td class="data-edit" title="Edit Ticket"><a href="/ticket/{{ticket.id}}/edit"><i class="ri-edit-box-line"></i></a></td>
+			</tr>
+			{% endif %}
+		{%endfor%}
+
+		</tbody>
+	</table>
+</div>
+
+<div class="container mx-auto form-container" style="width:600px">
+	{% if messages %}
+	<ul class="messages">    
+		{% for message in messages %}    
+			<ul {% if message.tags %} class="{{ message.tags }} alert alert-warning"{% endif %}>{{ message }}</ul>    
+		{% endfor %}
+	</ul>
+	{% endif %}
+</div>
+
+<div class="profile-table">
+	<h4 class="text-center">Comments Added by {{user.first_name}}</h4>
+	<table class="table">
+		<thead>
+			<tr>
+			<th scope="col" id='table-id'>Ticket ID </th>
+			<th scope="col">Subject </th>
+			<th scope="col">Ticket Comment </th>
+			<th scope="col">Remove</th>
+			</tr>
+		</thead>
+		<tbody>
+		{% for comment in all_comments reversed%}
+			{% if comment.poster.id == user.id %}
+			<tr class="table-row">
+				<td class='table-data' id='table-id'>{{comment.ticket.id}}</></td>
+				<td><a href="/ticket/{{comment.ticket.id}}/edit">{{comment.ticket.subject}}</a></td>
+				<td>{{comment.comment}}</td>
+				<td class="data-edit" title="Delete Comment"><a href="/comment/{{comment.id}}/delete"><i class="ri-delete-bin-line"></i></a></td>
+			</tr>
+			{% endif %}
+		{%endfor%}
+		</tbody>
+	</table>
+</div>
+
+<div class="account-card">
+	<h1>Account Details</h1>
+	<div>
+		<form action="/profile/{{user.id}}/update" method="POST">
+			{% csrf_token %}
+
+			<div class="inputs">
+				<label for="first_name">First Name: </label>
+					<input class="form-inputs" type="text" name="first_name" value="{{ user.first_name }}" disabled>
+			</div>
+
+			<div class="inputs">
+				<label for="last_name">Last Name: </label>
+					<input class="form-inputs" type="text" name="last_name" value="{{ user.last_name }}" disabled>
+			</div>
+
+			<div class="inputs">
+				<label for="email">Email: </label>
+					<input class="form-inputs" type="email" name="email" value="{{ user.email }}" disabled>
+			</div>
+
+			<div class"inputs">
+				<input class='button-input' type="submit" value="Update" disabled>
+			</div>
+
+		</form>
+
+		<div class"inputs">
+			<span>Member since {{user.created_at}}</span>
+		</div>
+	</div>
+</div>
+
+<div>
+	{% include 'footer.html'%}
+</div>
