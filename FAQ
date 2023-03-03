@@ -1,0 +1,16 @@
+FAQ for Bot:
+1. How to connect office printer through my OA VDI?
+2. How to customise my IP phone?
+3. What is the WiFi Password?
+4. I cannot log in my OA VDI, what to do?
+5. Can I reset my password?
+
+Greetings:
+Hi, I am MAtrix. Your personal support assistant. What do you want me to help you with?
+1. Understand HKMA [Things in the intranet: Mission statement and core values http://www.intra.hkma.gov.hk/hr/ce-message.html, O-chart]
+2. Create Helpdesk Support Ticket [API to create ticket]
+3. Track your Helpdesk Support Ticket Status [API to get ticket status]
+4. Check availability and book conference rooms 
+5. Check leave balance and Apply leave
+
+Scenarios:
