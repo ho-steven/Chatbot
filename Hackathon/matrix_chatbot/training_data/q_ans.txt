@@ -1,0 +1,2 @@
+How to check my helpdesk support ticket status?
+You can find the status of your support tickets <a href="http://127.0.0.1:8000/dashboard">here</a>
