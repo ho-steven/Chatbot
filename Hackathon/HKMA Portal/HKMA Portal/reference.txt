@@ -1,0 +1,13 @@
+https://dev.to/documatic/build-a-chatbot-using-python-django-46hb
+
+https://github.com/earthcomfy/chat-bot
+
+https://github.com/slyapustin/django-chatbot
+
+https://github.com/ahmadfaizalbh/Django-Chatbot
+
+https://pypi.org/project/chatbotAI/#topic-based-group
+
+https://github.com/shiyunbo/django-channels-chatbot
+
+https://github.com/PranavDalvi/Aapi-Ai-Django-ChatBot
