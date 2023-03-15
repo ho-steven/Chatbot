@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>MAtrix</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="icon" type="image/x-icon" href="/static/img/share_s.jpg">
+  
+<style>
+table, th, td {
+
+}
+
+.button {
+  background-color: aliceblue;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+</style>
+
+</head>
+
+
+
+
+<body>
+  <!-- partial:index.partial.html -->
+  <section class="msger">
+    <header class="msger-header">
+      <div class="msger-header-title">
+        <i class="fa-solid fa-envelope"></i> MAtrix <i class="fa-solid fa-envelope"></i>
+      </div>
+    </header>
+
+    <main class="msger-chat">
+      <div class="msg left-msg">
+        <div class="msg-img" style="background-image: url(http://127.0.0.1:5000/static/img/hkma.png)"></div>
+
+
+        <div class="msg-bubble">
+          <div class="msg-info">
+            <div class="msg-info-name">MAtrix</div>
+            <div class="msg-info-time">12:45</div>
+          </div>
+
+          <div class="msg-text">
+            Hi, welcome to MAtrix! Go ahead and send me a message. 😄
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <form class="msger-inputarea">
+      <input type="text" class="msger-input" id="textInput" placeholder="Enter your message...">
+      <button type="submit" class="msger-send-btn">Send</button>
+    </form>
+  </section>
+  <!-- partial -->
+  <script src='https://use.fontawesome.com/releases/v5.0.13/js/all.js'></script>
+  <script>
+
+    const msgerForm = get(".msger-inputarea");
+    const msgerInput = get(".msger-input");
+    const msgerChat = get(".msger-chat");
+
+
+    const BOT_IMG = "http://127.0.0.1:5000/static/img/hkma.png";
+    const PERSON_IMG = "http://127.0.0.1:5000/static/img/user.png";
+    const BOT_NAME = "MAtrix";
+    const PERSON_NAME = "You";
+
+	
+	const confirmMsg = "Confirm to create the ticket";
+	const msgPattern = " Please help ";
+	var subject = "";
+    var ticket_type = "Misc.";
+    var ticket_status = "New";
+    var ticket_description = "";	
+	
+	
+    msgerForm.addEventListener("submit", event => {
+      event.preventDefault();
+
+      const msgText = msgerInput.value;
+      if (!msgText) return;
+
+      appendMessage(PERSON_NAME, PERSON_IMG, "right", msgText);
+      msgerInput.value = "";
+	  	  
+      const msgPatternBR = " on ";
+	  var subject = "Please unlock my OA account and reset password";
+      var ticket_type = "Misc.";
+      var ticket_status = "New";
+      var ticket_description = "My OA Account is locked";
+      var balance = "8.63 day(s)"
+      var max_leave = "26.00 days"
+      var overflow_date = "22-Feb-2024"
+      var status = "Booked"
+      var status_ava = "Available"
+      var reserved_date = "2023-05-05 12:30-13:30"
+      var reserved_date1 = "2023-05-09 12:00-13:00"
+      var reserved_date2 = "2023-05-12 14:30-15:30"
+      var location = "IFC 5608 Meeting Room"
+      var location1 = "IFC 5609 Meeting Room"
+      var location2 = "IFC 5607 Meeting Room"
+      var subjectBR = ""
+      
+	  if(msgText.includes("What is my leave balance") || msgText.includes("leave balance") || msgText.includes("leave")){
+      	var msg2="Your remaining leave balance is 8.63 day(s)\<br\><br\><table><tr><td>Remaining Balance:</td><td>"+balance+"</td></tr><tr><td>Maximum Leave Accumulation:</td><td>"+max_leave+"</td></tr><tr><td>Next Levae Overflow Date:</td><td>"+overflow_date+"</td></tr></table>"
+		setTimeout(function() {
+            appendMessage(BOT_NAME, BOT_IMG, "left", msg2);
+        }, 1000);
+		
+      } else if(msgText.toLowerCase().includes("conference room")){
+        var strsBR = msgText.split(msgPatternBR)
+        var msg3="Checking on IFC conference room vacancy..."
+        var msg5="<table><tr><td>Status:</td><td>"+status_ava+"</td></tr><tr><td>Reserved Date:</td><td>"+reserved_date+"</td></tr><tr><td>Location:</td><td>"+location+"</td></tr><tr><td></br></td></tr><tr><td>Status:</td><td>"+status_ava+"</td></tr><tr><td>Location:</td><td>"+location1+"</td></tr><tr><td>Reserved Date:</td><td>"+reserved_date1+"</td></tr><tr><td></br></td></tr><tr><td>Status:</td><td>"+status_ava+"</td></tr><tr><td>Location:</td><td>"+location2+"</td></tr><tr><td>Reserved Date:</td><td>"+reserved_date2+"</td></tr></table>"
+
+        if(msgText.toLowerCase().includes("book")){
+        subjectBR = strsBR[1].slice(0);
+        DateLocBR = strsBR[0].slice(4);
+        var msg4="<table><tr><td>Status:</td><td>"+status+"</td></tr><tr><td>Reserved Date:</td><td>"+subjectBR+"</td></tr><tr><td>Location:</td><td>"+DateLocBR+"</td></tr></table>"
+        setTimeout(function() {
+            appendMessage(BOT_NAME, BOT_IMG, "left", msg4);
+        }, 3000);
+        }else {
+        appendMessage(BOT_NAME, BOT_IMG, "left", msg3);
+		setTimeout(function() {
+            appendMessage(BOT_NAME, BOT_IMG, "left", msg5);
+        }, 4000);}
+		
+      } else if (msgText.includes(msgPattern) ) {
+	    var strs = msgText.split(msgPattern)
+		
+		subject = strs[1].charAt(0).toUpperCase() + strs[1].slice(1);
+		ticket_description = strs[0].charAt(0).toUpperCase() + strs[0].slice(1);
+		var msg="The following ticket will be created for you. Please click Confirm button to create the ticket.<br\><br\><table><tr><td>Subject:</td><td>"+subject+"</td></tr><tr><td>TicketType:</td><td>"+ticket_type+"</td></tr><tr><td>TicketDescription:</td><td>"+ticket_description+"</td></tr></table><br\> <button class=\"button\" onclick=\"funcToConfirm()\">Confirm</button>"
+		setTimeout(function() {
+			appendMessage(BOT_NAME, BOT_IMG, "left", msg);
+        }, 3000);
+
+	  } else if (msgText.includes(confirmMsg) ) {
+		createTicket(subject, ticket_type, ticket_status, ticket_description);
+		setTimeout(function() {
+			appendMessage(BOT_NAME, BOT_IMG, "left", "The ticket is created. To check the ticket, please go to <a href=\"http://127.0.0.1:8000/dashboard\" target=\"_blank\">HKMA Portal</a>");
+		}, 3000);
+		
+	  } else {
+		botResponse(msgText);
+	  }
+    });
+
+	function funcToConfirm() {
+		document.getElementById('textInput').value = confirmMsg;
+		document.getElementsByClassName("msger-send-btn")[0].click()
+	}
+	
+	
+    function appendMessage(name, img, side, text) {
+      //   Simple solution for small apps
+      const msgHTML = `
+<div class="msg ${side}-msg">
+  <div class="msg-img" style="background-image: url(${img})"></div>
+
+  <div class="msg-bubble">
+    <div class="msg-info">
+      <div class="msg-info-name">${name}</div>
+      <div class="msg-info-time">${formatDate(new Date())}</div>
+    </div>
+
+    <div class="msg-text">${text}</div>
+
+</div>
+`;
+
+      msgerChat.insertAdjacentHTML("beforeend", msgHTML);
+      msgerChat.scrollTop += 500;
+    }
+
+    function botResponse(rawText) {
+
+      // Bot Response
+      $.get("/get", { msg: rawText }).done(function (data) {
+        console.log(rawText);
+        console.log(data);
+        const msgText = data;
+        appendMessage(BOT_NAME, BOT_IMG, "left", msgText);
+
+      });
+
+    }
+	
+    function createTicket(subject, ticket_type, ticket_status, ticket_description) {
+
+      // Bot Response
+      $.get("http://127.0.0.1:8000/api/ticket/create", { subject: subject, ticket_type: ticket_type, ticket_status: ticket_status, ticket_description: ticket_description  }).done(function (data) {
+        console.log(rawText);
+        console.log(data);
+        const msgText = data;
+        appendMessage(BOT_NAME, BOT_IMG, "left", msgText);
+
+      });
+
+    }	
+
+
+    // Utils
+    function get(selector, root = document) {
+      return root.querySelector(selector);
+    }
+
+    function formatDate(date) {
+      const h = "0" + date.getHours();
+      const m = "0" + date.getMinutes();
+
+      return `${h.slice(-2)}:${m.slice(-2)}`;
+    }
+
+
+
+  </script>
+
+</body>
+
+</html>
