@@ -1,0 +1,100 @@
+{% include 'logged_navbar.html'%}
+
+
+<section class="cards">
+
+    <div class="card">
+        <img src="/static/img/help-desk.png" alt="">
+        <h4>Support Chatbot</h4>
+        <p>Chat with our new powerfull AI Chatbot - MAtrix for support </p>
+        <a class="card-buttons" href="http://127.0.0.1:5000/" target="_blank">Chatbot</a>
+    </div>
+
+
+    <div class="card">
+        <img src="/static/img/registration.png" alt="">
+        <h4>Register Portal Account</h5>
+        <p>New Staff? Click here to register an account for HKMA Portal       </p>
+        <a class="card-buttons" href="/new_user">Register</a>
+    </div>
+
+
+
+    <div class="card">
+        <img src="/static/img/layout.png" alt="">
+        <h4>Create New/ View Support Ticket</h4>
+        <p>Create New/ View/ Edit/ Comment Helpdesk Support Ticket                  </p>
+        <a class="card-buttons" href="/dashboard">Dashboard</a>
+		  
+    </div>
+
+
+
+</section>
+
+<section class="cards">
+    <div class="card">
+        <img src="/static/img/book.png" alt="">
+        <h4>Staff Handbook</h4>
+        <p>Read more about the HKMA Policies and Staff Handbook                                    </p>
+        <a class="card-buttons" href="#">Handbook</a>
+		
+
+    </div>
+
+    <div class="card">
+        <img src="/static/img/booking.png" alt="">
+        <h4>Conference Room Booking</h4>
+        <p>Click here to book conference rooms and check availability         </p>
+        <a class="card-buttons" href="#">Book</a>
+    </div>
+
+
+    <div class="card">
+        <img src="/static/img/computer.png" alt="">
+        <h4>Leave Application System</h5>
+        <p>Click here to apply for leave and check leave balance                            </p>
+        <a class="card-buttons" href="#">Apply</a>
+    </div>
+</section>
+
+
+
+<div class="login-card">
+    <h1>Login to get started!</h1>
+        {% if messages %}
+        <ul class="messages">    
+            {% for message in messages %}    
+                <ul {% if message.tags %} class="{{ message.tags }} alert alert-warning"{% endif %}>{{ message }}</ul>    
+            {% endfor %}
+        </ul>
+        {% endif %}
+    <form action="/login" method="POST">
+        {% csrf_token %}
+
+
+
+        <div class="inputs">
+            <label for="email">email</label>
+            <input class='form-inputs' type="email" placeholder="Email" name="email" />
+            <span>We'll never share your email with anyone.</span>
+            
+            <label for="password">password</label>
+            <input class='form-inputs' type="password" placeholder="Password" name="password" />
+            <span>Secure from end to end.</span>
+
+            <button class="login-button" type="submit">login</button>
+        </div>
+    </form>
+    <div class="reg-link">
+        <a href="/new_user">New User? Click here to register.</a>
+    </div>
+</div>
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+{% include 'footer.html'%}
