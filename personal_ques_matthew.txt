@@ -1,0 +1,42 @@
+plan
+<table><tr><td>Plan 11:</td><td>For Executive Director and above</td></tr><tr><td>Plan 1:</td><td>For Division Head</td></tr><tr><td>Plan 2:</td><td>For Senior Manager, Manager and Manager Trainee</td></tr><tr><td>Plan 3:</td><td>For Office Assistant to Assistant Manager</td></tr></table>
+plan 11
+Plan 11: For Executive Director and above
+plan11
+Plan 11: For Executive Director and above
+plan 1
+Plan 1: For Division Head
+plan1
+Plan 1: For Division Head
+plan 2
+Plan 2: For Senior Manager, Manager and Manager Trainee
+plan2
+Plan 2: For Senior Manager, Manager and Manager Trainee
+plan 3
+Plan 3: For Office Assistant to Assistant Manager
+plan3
+Plan 3: For Office Assistant to Assistant Manager
+Dependent Cover
+Dependent Cover<br\><table><tr><td>Plan11</td><td>Yes</td></tr><tr><tr><td>Plan1</td><td>Yes</td></tr><tr><tr><td>Plan2</td><td>Yes</td></tr><tr><tr><td>Plan3</td><td>Yes</td></tr><tr></table>
+Hospitalisation 
+Hospitalisation Accomodation<br\><table><tr><td>Plan11</td><td>100% Private room with board $3150 per day with 180 days maximum</td></tr><tr><tr><td>Plan1</td><td>100% Private room with board $2500 per day with 180 days maximum</td></tr><tr><tr><td>Plan2</td><td>100% Semi-Private room with board $1900 per day with 180 days maximum</td></tr><tr><tr><td>Plan3</td><td>100% Ward room with board $1100 per day with 180 days maximum</td></tr><tr></table>
+Hospitalisation Accomodation
+Hospitalisation Accomodation<br\><table><tr><td>Plan11</td><td>100% Private room with board $3150 per day with 180 days maximum</td></tr><tr><tr><td>Plan1</td><td>100% Private room with board $2500 per day with 180 days maximum</td></tr><tr><tr><td>Plan2</td><td>100% Semi-Private room with board $1900 per day with 180 days maximum</td></tr><tr><tr><td>Plan3</td><td>100% Ward room with board $1100 per day with 180 days maximum</td></tr><tr></table>
+Accomodation
+Hospitalisation Accomodation<br\><table><tr><td>Plan11</td><td>100% Private room with board $3150 per day with 180 days maximum</td></tr><tr><tr><td>Plan1</td><td>100% Private room with board $2500 per day with 180 days maximum</td></tr><tr><tr><td>Plan2</td><td>100% Semi-Private room with board $1900 per day with 180 days maximum</td></tr><tr><tr><td>Plan3</td><td>100% Ward room with board $1100 per day with 180 days maximum</td></tr><tr></table>
+Hospital accomodation
+Hospitalisation Accomodation<br\><table><tr><td>Plan11</td><td>100% Private room with board $3150 per day with 180 days maximum</td></tr><tr><tr><td>Plan1</td><td>100% Private room with board $2500 per day with 180 days maximum</td></tr><tr><tr><td>Plan2</td><td>100% Semi-Private room with board $1900 per day with 180 days maximum</td></tr><tr><tr><td>Plan3</td><td>100% Ward room with board $1100 per day with 180 days maximum</td></tr><tr></table>
+Hospitalisation accomodation doctor
+Hospitalisation accomodation doctor<br\><table><tr><td>Plan11</td><td>100% 3150 per days (180 days maximum)</td></tr><tr><tr><td>Plan1</td><td>100% 2500  per days  (180 days maximum)</td></tr><tr><tr><td>Plan2</td><td>100% 1900 per days  (180 days maximum)</td></tr><tr><tr><td>Plan3</td><td>100% 1100 per days  (180 days maximum)</td></tr><tr></table>
+Hospital accomodation doctor
+Hospitalisation accomodation doctor<br\><table><tr><td>Plan11</td><td>100% 3150 per days (180 days maximum)</td></tr><tr><tr><td>Plan1</td><td>100% 2500  per days  (180 days maximum)</td></tr><tr><tr><td>Plan2</td><td>100% 1900 per days  (180 days maximum)</td></tr><tr><tr><td>Plan3</td><td>100% 1100 per days  (180 days maximum)</td></tr><tr></table>
+Clinical
+Clinical doctors<br\><table><tr><td>Plan11</td><td>100% $750 per visit per day (40 visit maximum)</td></tr><tr><tr><td>Plan1</td><td>100% $650 per visit per day  (40 visit maximum)</td></tr><tr><tr><td>Plan2</td><td>100% $550 per visit per day  (40 visit maximum)</td></tr><tr><tr><td>Plan3</td><td>100% $450 per visit per day  (40 visit maximum)</td></tr><tr></table>
+doctor
+Clinical doctors<br\><table><tr><td>Plan11</td><td>100% $750 per visit per day (40 visit maximum)</td></tr><tr><tr><td>Plan1</td><td>100% $650 per visit per day  (40 visit maximum)</td></tr><tr><tr><td>Plan2</td><td>100% $550 per visit per day  (40 visit maximum)</td></tr><tr><tr><td>Plan3</td><td>100% $450 per visit per day  (40 visit maximum)</td></tr><tr></table>
+Clinical doctor
+Clinical doctors<br\><table><tr><td>Plan11</td><td>100% $750 per visit per day (40 visit maximum)</td></tr><tr><tr><td>Plan1</td><td>100% $650 per visit per day  (40 visit maximum)</td></tr><tr><tr><td>Plan2</td><td>100% $550 per visit per day  (40 visit maximum)</td></tr><tr><tr><td>Plan3</td><td>100% $450 per visit per day  (40 visit maximum)</td></tr><tr></table>
+Physiotherapy
+Physiotherapy<br\><table><tr><td>Plan11</td><td>100% $750 per visit per day (40 visit maximum)</td></tr><tr><tr><td>Plan1</td><td>100% $650 per visit per day  (40 visit maximum)</td></tr><tr><tr><td>Plan2</td><td>100% $550 per visit per day  (40 visit maximum)</td></tr><tr><tr><td>Plan3</td><td>100% $450 per visit per day  (40 visit maximum)</td></tr><tr></table>
+Chiropractor
+Chiropractor<br\><table><tr><td>Plan11</td><td>100% $750 per visit per day (40 visit maximum)</td></tr><tr><tr><td>Plan1</td><td>100% $650 per visit per day  (40 visit maximum)</td></tr><tr><tr><td>Plan2</td><td>100% $550 per visit per day  (40 visit maximum)</td></tr><tr><tr><td>Plan3</td><td>100% $450 per visit per day  (40 visit maximum)</td></tr><tr></table>
